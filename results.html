@@ -1,0 +1,344 @@
+<html>
+<head>
+  <meta charset="utf-8">
+
+<link rel="StyleSheet" href="try1.css" type="text/css" media="screen">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+
+<script>
+$(document).ready(function () {
+	"use strict"
+	
+	$("html,body").animate({scrollTop: 0}, 500);
+
+})
+window.addEventListener("load", function(){
+	var load_screen = document.getElementById("load_screen");
+	$("#load_screen").animate({ opacity: '0'}, 3000, function(){
+	document.body.removeChild(load_screen);
+	});
+	});
+	
+	function slider() {
+		var obj = document.getElementById('slide'); 
+		obj.style.visibility = (obj.style.visibility == 'visible') ? 'hidden' : 'visible';
+		obj.style.height = (obj.style.height == '0px' || obj.style.height == '') ? '150px' : '0px';
+	}
+
+</script>
+<script>
+jQuery(function($){ //on document.ready
+Object.defineProperty(Array.prototype, "remove", {
+    enumerable: false,
+    value: function (itemToRemove) {
+        var removeCounter = 0;
+
+        for (var index = 0; index < this.length; index++) {
+            if (this[index] == itemToRemove) {
+                this.splice(index, 1);
+                removeCounter++;
+                index--;
+            }
+        }
+        return removeCounter;
+    }
+});
+var arr = [];
+var seat_num = 0;
+
+
+$('.button_seats').click(function() {
+
+
+      if(arr.indexOf(this.id) != -1){
+				arr.remove(this.id);
+				seat_num--;
+      }
+      else{
+      	if(seat_num < 3){
+        arr.push(this.id);
+		seat_num++;
+		 }
+      }
+      	
+
+
+       
+         alert(arr);
+		
+});
+
+})
+
+
+
+ 
+</script>
+</head>
+
+
+<body>
+
+
+<div class="mpc_preloader" id="load_screen">
+	<div class="mpc_preloader18"></div>
+	<span class="mpc_preloader18_label">Loading...</span>
+</div>
+
+	<div id="wrapper">
+		<div id="header">
+
+		<div id="main1-left-clamp-results">
+		
+			<div id="clamp-gradient">
+			</div>
+		
+		</div>
+		
+		<div id="main1-right-clamp-results">
+		
+			<div id="clamp-gradient">
+			</div>
+		
+		</div>
+			<div id="box-shadow"></div>
+			<div id="header-gradient">
+			
+				<div id="header-position">
+					
+					<form>
+						<a href="/xampp/htdocs/webprog/WebAir/index.html" id="home" style="border-bottom: 1px solid #e02e36;" class="button-top">Home</a>
+						<a href="#" id="info" class="button-top">Flights Info</a>
+						<a href="#" id="manage" class="button-top">Manage Ticket</a>
+						<a href="#" id="about" class="button-top">About Us</a>
+					</form>
+					
+				</div>
+				<p class="account" onclick="slider();">Account</p>
+			</div>
+		<div id="logo-box">
+			<img src="http://i67.tinypic.com/f6w5i.png" style="width:100%;height:100%;">
+		</div>
+		</div>
+			<div id="main1-results">
+				<div id="box">
+					<div id="box-gradient-results">
+					<div id="results-num">
+						<p>Passangers and seats</p>
+					</div>
+					</div>				
+				</div>
+			</div>
+
+			<div id="results-page">
+				<div id="seats">
+					<div id="col">
+						<div id="col1">
+							<p id="spacing">A B C</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="1" class="button_seats button_green button_about" style="pointer-events: none; background-color:red;"></a>
+								<a id="2" class="button_seats button_green button_about"></a>
+								<a id="3" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="4" class="button_seats button_green button_about"></a>
+								<a id="5" class="button_seats button_green button_about"></a>
+								<a id="6" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="7" class="button_seats button_green button_about"></a>
+								<a id="8" class="button_seats button_green button_about"></a>
+								<a id="9" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="10" class="button_seats button_green button_about"></a>
+								<a id="11" class="button_seats button_green button_about"></a>
+								<a id="12" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="13" class="button_seats button_green button_about"></a>
+								<a id="14" class="button_seats button_green button_about"></a>
+								<a id="15" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="16" class="button_seats button_green button_about"></a>
+								<a id="17" class="button_seats button_green button_about"></a>
+								<a id="18" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="19" class="button_seats button_green button_about"></a>
+								<a id="20" class="button_seats button_green button_about"></a>
+								<a id="21" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="22" class="button_seats button_green button_about"></a>
+								<a id="23" class="button_seats button_green button_about"></a>
+								<a id="24" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="25" class="button_seats button_green button_about"></a>
+								<a id="26" class="button_seats button_green button_about"></a>
+								<a id="27" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="28" class="button_seats button_green button_about"></a>
+								<a id="29" class="button_seats button_green button_about"></a>
+								<a id="30" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+					</div>
+
+					<div id="col_num">
+						<div id="col1_num">
+							<p id="spacing">1</p>
+						</div>
+						<div id="col1_num">
+							<p id="spacing">2</p>
+						</div>
+						<div id="col1_num">
+							<p id="spacing">3</p>
+						</div>
+						<div id="col1_num">
+							<p id="spacing">4</p>
+						</div>
+						<div id="col1_num">
+							<p id="spacing">5</p>
+						</div>
+						<div id="col1_num">
+							<p id="spacing">6</p>
+						</div>
+						<div id="col1_num">
+							<p id="spacing">7</p>
+						</div>
+						<div id="col1_num">
+							<p id="spacing">8</p>
+						</div>
+						<div id="col1_num">
+							<p id="spacing">9</p>
+						</div>
+						<div id="col1_num">
+							<p id="spacing_last">10</p>
+						</div>
+
+					</div>
+
+
+					<div id="col">
+						<div id="col1">
+							<p id="spacing">D E F</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="31" class="button_seats button_green button_about"></a>
+								<a id="32" class="button_seats button_green button_about"></a>
+								<a id="33" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="34" class="button_seats button_green button_about"></a>
+								<a id="35" class="button_seats button_green button_about"></a>
+								<a id="36" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="37" class="button_seats button_green button_about"></a>
+								<a id="38" class="button_seats button_green button_about"></a>
+								<a id="39" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="40" class="button_seats button_green button_about"></a>
+								<a id="41" class="button_seats button_green button_about"></a>
+								<a id="42" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="43" class="button_seats button_green button_about"></a>
+								<a id="44" class="button_seats button_green button_about"></a>
+								<a id="45" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="46" class="button_seats button_green button_about"></a>
+								<a id="47" class="button_seats button_green button_about"></a>
+								<a id="48" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="49" class="button_seats button_green button_about"></a>
+								<a id="50" class="button_seats button_green button_about"></a>
+								<a id="51" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="52" class="button_seats button_green button_about"></a>
+								<a id="53" class="button_seats button_green button_about"></a>
+								<a id="54" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="55" class="button_seats button_green button_about"></a>
+								<a id="56" class="button_seats button_green button_about"></a>
+								<a id="57" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+						<div id="col1">
+							<p>
+								<a id="58" class="button_seats button_green button_about"></a>
+								<a id="59" class="button_seats button_green button_about"></a>
+								<a id="60" class="button_seats button_green button_about"></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div id="footer">
+		<div id="box-shadow"></div>
+			<div id="header-gradient">
+				<div id="footer-position">
+					&#174 2016 UWE WebAir. All rights reserved. 
+				</div>
+			</div>
+
+		</div>
+		<div id="slide" class="slide">
+	  		<div id="logo-box">
+				<form>
+					<p style="font-size:13px;">Sign in to see exclusive Member Pricing</p>
+					<button class="button1">Sign in</button>
+					<p>New? <a href="url" style="color:red;">Create an Account</a></p>
+				</form>
+			</div>
+		</div>
+    </div>
+</body>
+</html>

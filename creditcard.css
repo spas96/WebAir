@@ -1,0 +1,199 @@
+.creditcard-wrapper.gray-theme .card_type {
+  float: right;
+  font-style: italic;
+  font-weight: normal !important;
+}
+
+.creditcard-wrapper.gray-theme h3 {
+  font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif;
+  background: #424242;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 14px;
+  margin: 0;
+  text-transform: uppercase;
+  height: 20px;
+}
+
+.creditcard-wrapper.gray-theme .credit-card-wrapper {
+  padding: 30px 0;
+}
+
+.creditcard-wrapper.gray-theme {
+  background: #E9E9E9;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+}
+
+.creditcard-wrapper.gray-theme .form-control:focus {
+  border-color: #888;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+}
+
+.creditcard-wrapper.gray-theme .form-control {
+  border-color: #BBB;
+  border-radius: 0px;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+}
+
+.creditcard-wrapper.gray-theme .control-label {
+  font-family: ITC Franklin Gothic,Arial,sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.creditcard-wrapper.gray-theme .col-sm-8,
+.creditcard-wrapper.gray-theme .col-sm-4 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*
+ * Bootstrap stuff
+ */
+
+.creditcard-wrapper input.form-control.has-error {
+  outline: none;
+  border-color: #ff7076;
+  border-top-color: #ff5c61;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0),0 0 4px 0 rgba(255,0,0,0.5);
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0),0 0 4px 0 rgba(255,0,0,0.5);
+  -ms-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0),0 0 4px 0 rgba(255,0,0,0.5);
+  -o-box-shadow: inset 0 1px 2px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0),0 0 4px 0 rgba(255,0,0,0.5);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2),0 1px 0 rgba(255,255,255,0),0 0 4px 0 rgba(255,0,0,0.5);
+}
+
+.creditcard-wrapper .form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.creditcard-wrapper .form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+}
+
+.creditcard-wrapper label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.creditcard-wrapper input:focus::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+.creditcard-wrapper input:focus:-moz-placeholder {
+    color: #ccc;
+}
+
+.creditcard-wrapper input:focus::-moz-placeholder {
+    color: #ccc;
+}
+
+.creditcard-wrapper input:focus:-ms-input-placeholder {
+    color: #ccc;
+}
+
+.creditcard-wrapper .col-sm-8 {
+  width: 66.6666666666666%;
+}
+
+.creditcard-wrapper .col-sm-4 {
+  width: 33.3333333333333%;
+}
+
+.creditcard-wrapper .col-sm-8,
+.creditcard-wrapper .col-sm-4 {
+  float: left;
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.creditcard-wrapper .form-group {
+  width: 100%;
+  display: table;
+}
+
+.creditcard-wrapper .first-row {
+  margin-bottom: 20px;
+}
+
+.creditcard-wrapper .card-type {
+  margin-top: 10px;
+  /*float: right;*/
+  position: absolute;
+  left: 53%;
+  top: 44%;
+}
+
+/**
+ * Button CSS
+ */
+
+.creditcard-gray-theme-submit {
+  background: #117a1d;
+  position: absolute;
+  left: 3%;
+  top: 79%;
+  border: 0;
+  color: #FFF;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 40px;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+}
+
+.creditcard-gray-theme-submit:hover {
+  background: #07470f;
+}
+
+.creditcard-gray-theme-submit:active {
+  background: #07470f;
+  border: 0;
+  outline: 0;
+}
+
+.creditcard-gray-theme-submit:focus {
+  background: #5abd5b;
+}
+

@@ -1,0 +1,309 @@
+<html>
+<head>
+  <meta charset="utf-8">
+
+<link rel="StyleSheet" href="try.css" type="text/css" media="screen">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="javascript.js"></script>
+<script src="javascript1.js"></script>
+<script type="text/javascript">
+    var datefield=document.createElement("input")
+    datefield.setAttribute("type", "date")
+        document.write('<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"><\/script>\n')
+        document.write('<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"><\/script>\n')
+</script>
+<script>
+ 
+
+        jQuery(function($){ //on document.ready
+			$( ".start_date" ).datepicker({
+				onClose: function( selectedDate ) {
+				$( ".end_date" ).datepicker( "option", "minDate", selectedDate );
+				$( ".start_date_required" ).val($( ".start_date" ).val());
+			},
+			 beforeShowDay: function(date) {
+				var day = date.getDay();
+				return [day != 1];
+			},
+			minDate: 0,
+			maxDate: '+3M'
+			
+			
+			});
+			$( ".end_date" ).datepicker({
+				onClose: function( selectedDate ) {
+				$( ".start_date" ).datepicker( "option", "maxDate", selectedDate );
+				$( ".end_date_required" ).val($( ".end_date" ).val());
+			  },
+			 beforeShowDay: function(date) {
+				var day = date.getDay();
+				return [day != 1];
+			},
+			maxDate: '+3M'
+			});
+        })
+</script>
+
+<script>
+var keys = {32: 1, 33: 1, 34: 1, 35: 1, 36: 1, 37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function preventDefaultForScrollKeys(e) {
+    if (keys[e.keyCode]) {
+        preventDefault(e);
+        return false;
+    }
+}
+function disableScroll() {
+  if (window.addEventListener) // older FF
+      window.addEventListener('DOMMouseScroll', preventDefault, false);
+  window.onwheel = preventDefault; // modern standard
+  window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+  window.ontouchmove  = preventDefault; // mobile
+  document.onkeydown  = preventDefaultForScrollKeys;
+}
+
+function enableScroll() {
+    if (window.removeEventListener)
+        window.removeEventListener('DOMMouseScroll', preventDefault, false);
+    window.onmousewheel = document.onmousewheel = null; 
+    window.onwheel = null; 
+    window.ontouchmove = null;  
+    document.onkeydown = null;  
+} 
+
+window.addEventListener("load", function(){
+  disableScroll();
+	 var load_screen = document.getElementById("load_screen");
+  $("#load_screen").animate({ opacity: '0'}, 3000, function(){
+   document.body.removeChild(load_screen);
+   enableScroll();
+  });
+});
+	
+	
+	function slider() {
+		var obj = document.getElementById('slide'); 
+		obj.style.visibility = (obj.style.visibility == 'visible') ? 'hidden' : 'visible';
+		obj.style.height = (obj.style.height == '0px' || obj.style.height == '') ? '150px' : '0px';
+  obj.style.right = "10%";
+	}
+</script>
+</head>
+
+
+<body>
+
+
+<div class="mpc_preloader" id="load_screen">
+	<div class="mpc_preloader18"></div>
+	<span class="mpc_preloader18_label">Loading...</span>
+</div>
+
+	<div id="wrapper">
+		<div id="header">
+
+		<div id="main1-left-clamp">
+		
+			<div id="clamp-gradient">
+			</div>
+		
+		</div>
+		
+		<div id="main1-right-clamp">
+		
+			<div id="clamp-gradient">
+			</div>
+		
+		</div>
+			<div id="box-shadow"></div>
+			<div id="header-gradient">
+			
+				<div id="header-position">
+					
+					<form>
+						<a href="/webprog/WebAir/" id="home" style="border-bottom: 1px solid #e02e36;" class="button-top">Home</a>
+						<a href="#" id="info" class="button-top">Flights Info</a>
+						<a href="/webprog/WebAir/manage_ticket.py" id="manage" class="button-top">Manage Ticket</a>
+						<a href="#" id="about" class="button-top">About Us</a>
+					</form>
+					
+				</div>
+				<p class="account" onclick="slider();">Account</p>
+			</div>
+		<div id="logo-box">
+			<img src="http://i67.tinypic.com/f6w5i.png" style="width:100%;height:100%;">
+		</div>
+		</div>
+			<div id="main1">
+				<div id="box">
+				<div id="box-shadow"></div>
+		
+				<div id="box-gradient">
+
+					<div id="frame">
+
+						<div id="box-shadow"></div>
+						
+							<div id="main1-1">
+							
+								<div id="box1">
+									<div id="box-gradient">
+											
+											<div id="top-frame">
+												<div id="box-shadow">
+												<div id="left-edge-shadow">
+													<div id="box-shadow"></div>
+												</div>
+												<div id="right-edge-shadow">
+													<div id="box-shadow"></div>
+												</div>
+											</div>
+												
+												
+												<div id="frame-gradient">
+												Search Flights
+												</div>
+												
+											</div>
+											
+											<br>
+											
+											<form id="search-box" action="results.py" method="POST">
+											
+													
+												
+														<div id="main-position1">
+															
+															<input name="start_dest" id="start_dest" class="start_dest" type="text" autocomplete="off"  placeholder= "From"  required/>
+															
+															<input name="end_dest" id="end_dest" class="end_dest" type="text" autocomplete="off"  placeholder= "To" required/>	
+														</div>
+														
+														<div id="main-position3">
+															<div id="ways">
+																<div id="contentcolumn">
+																	<input type="radio" name="radio" id="radio1" value="1" class="radio" checked/>
+																	<label for="radio1">One Way</label>
+																</div>
+																<div id="leftcolumn">
+																		<input type="radio" name="radio" id="radio2" value="2" class="radio"/>
+																		<label for="radio2">Return</label>
+																</div>
+															</div>
+															<div id="passangers">
+																	<div id="contentcolumn">
+																		<input name="adl" id="adl" class="passangers" type="text" autocomplete="off"  placeholder= "Adults" required/>
+																	</div>
+																
+																	<div id="leftcolumn">
+																		<input name="child" id="child" class="passangers" type="text" autocomplete="off"  placeholder= "Childrens" required/>
+																	</div>
+															</div>
+														</div>														
+														
+														<div id="req-position">
+															<input name="start_date_required" class="start_date_required" type="text" autocomplete="off"  placeholder= "Depart" required/>
+															<input name="end_date_required" class="end_date_required" type="text" autocomplete="off"  placeholder= "Return" required/>	
+														</div>
+												
+														<div id="main-position2">
+															<input name="start_date" class="start_date" type="text" autocomplete="off" readonly='true'  placeholder= "Depart" required/>
+															<input name="end_date" class="end_date" type="text" autocomplete="off" readonly='true'  placeholder= "Return" required/>	
+														</div>
+														<div class="sub">
+															<button class="button">Search</button>
+														</div>
+													
+														
+											</form>
+										
+											
+									</div>
+								</div>
+							</div>
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="a1">
+			<div onclick="" class="bristol">
+				<div class="head">
+					<p class="head"><b>Bristol</b></p>
+					<p class="tickets">Tickets start from &#163;35</p>
+				</div>		
+			</div>
+				
+		</div>
+		<div id="a2">
+			<div onclick="" class="london">
+				<div class="head">
+					<p class="head"><b>London</b></p>
+					<p class="tickets">Tickets start from &#163;25</p>
+				</div>	
+			</div>
+		</div>
+
+		<div id="a3">
+			<div onclick="" class="southampton">
+				<div class="head">
+					<p class="head"><b>Southampton</b></p>
+					<p class="tickets">Tickets start from &#163;20</p>
+				</div>	
+			</div>
+		</div>
+		<div id="a4">
+			<div onclick="" class="edinburgh">
+				<div class="head">
+					<p class="head"><b>Edinburgh</b></p>
+					<p class="tickets">Tickets start from &#163;45</p>
+				</div>	
+			</div>
+		</div>
+		<div id="main3">
+  <table>
+  <tr>
+    <th style="width:200%"></th>
+    <th><div id="offers">
+			<div id="rotate-shadow"></div>
+				<div id="red-line">
+					<b>TOP Offers</b>
+				</div>
+			</div></th>
+  </tr>
+			 </table>
+			<img src="http://i63.tinypic.com/2vt2i49.png" style="width:100%;height:auto;">
+
+		</div>
+		<div id="footer">
+		<div id="box-shadow"></div>
+			<div id="box-gradient">
+				<div id="footer-position">
+					&#174 2016 UWE WebAir. All rights reserved. 
+				</div>
+			</div>
+
+		</div>
+		<div id="slide" class="slide">
+	  		<div id="logo-box">
+				<form>
+					<p style="font-size:13px;">Sign in to see exclusive Member Pricing</p>
+					<button class="button1">Sign in</button>
+					<p>New? <a href="url" style="color:red;">Create an Account</a></p>
+				</form>
+			</div>
+		</div>
+    </div>
+	<div id="results"></div>
+	<div id="results1"></div>
+</body>
+</html>
